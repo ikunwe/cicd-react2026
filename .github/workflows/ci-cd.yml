@@ -41,7 +41,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }} 
           # สคริปต์ที่จะไปรันบนเซิร์ฟเวอร์ของคุณเพื่อดึง Image ใหม่มาเปิด 
           script: | 
-            docker pull your-username/your-repo-name:latest 
+            docker pull iikunwe/cicd-react2026:latest 
             docker stop my-react-app || true 
             docker rm my-react-app || true 
-            docker run -d --name my-react-app -p 80:80 your-username/your-repo-name:latest
+            docker run -d --name my-react-app -p 80:80 iikunwe/cicd-react2026:latest
